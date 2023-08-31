@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""
+Async routine called wait_n
+Takes in 2 int arguments (in this order): n and max_delay.
+It will spawn wait_random n times with the specified max_delay.
+"""
+import asyncio
+from typing import List
+wait_random = __import__('0-basic_async_syntax').wait_random
+
+
+async def wait_n(n: int, max_delay: int) -> List[float]:
+    """Spawn wait_random n times with the specified max_delay."""
+    spawns = []
+    for i in range(n):
+        spawns.append(await wait_random(max_delay))
+    return sorted(spawns)
