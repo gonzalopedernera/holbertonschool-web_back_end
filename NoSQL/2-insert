@@ -1,3 +1,4 @@
 // inserts a document in the collecion "school"
-use my_db
-db.school.insertOne({name: "Holberton school", database: "mongo"})
+db.school.insertOne({
+    name: "Holberton school"
+})
