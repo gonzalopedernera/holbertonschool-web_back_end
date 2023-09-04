@@ -1,4 +1,2 @@
 // inserts a document in the collecion "school"
-db.school.insertOne({
-    name: "Holberton school"
-})
+db.school.insertOne({name: "Holberton school"});
